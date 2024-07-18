@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* variables css ............................................................................................*/
+:root{
+    --body-font: "Poppins", sans-serif;
+    --main-color:#8CA57A;
+    --second-color:#FCF9F2;
+    --third-color:#47593a;
+    --four-color:#e9b534;
+    --five-color:#EABF53;
+}
+/* general styling start .......................................................................................*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+button{
+    background-color: var(--four-color);
+    color: var(--second-color);
+    font-size: 1.2rem;
+    padding: 2% 5%;
+    border: 0;
+}
+button:hover{
+    background-color: var(--five-color);
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: var(--main-color);
+    font-size: 1.2rem;
+}
+a:hover{
+    color:var(--third-color);
+}
+i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+i:hover{
+    color: var(--third-color);
+}
+.title{
+    color: var(--third-color);
+    font-family: 'Times New Roman', Times, serif;
+}
+.line img{
+    background-color: var(--main-color);
+}
+.fixed-icon{
+    position: fixed;
+    z-index: 5;
+    background-color: var(--main-color);
+    bottom:3%; 
+    right: 3%;
+}
+/* general styling end .....................................................................................*/
+/* nav-bar start............................................................................................*/
+nav{
+    background-color: var(--second-color);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0,0.4);
+}
+.navbar-toggler{
+    display: none;
+}
+#nav-list{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+#closed{
+    display: none;
+    z-index: 3;
+}
+/* nav-bar end ........................................................................................*/ 
+/* first section start ...................................................................................*/
+.first-section{
+    height: 75vh;
+    background-image: url(../images/صورة\ واتساب\ بتاريخ\ 1446-01-11\ في\ 07.04.00_84c3bb1b.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.first-section div p{
+    font-size: 1.5rem;
+}
+.header-p{
+    font-size: 1.3rem;
+    color:var(--third-color);
+}
+.item{
+    cursor: pointer;
+}
+/* top sellers start ....................................................................................*/
+.seller-content p{
+    color: var(--third-color);
+}
+.icon-star i{
+    color: var(--five-color);
+}
+.seller-button{
+    top: 20%;
+    visibility: hidden;
+    transition:visibility 0.8s;
+}
+.seller-content:hover .seller-button{
+    visibility: visible;
+}
+/* first section end ......................................................................................*/
+/* articles start .........................................................................................*/
+#Articles{
+    background-color: var(--second-color);
+}    
+.article div{
+    background-color: rgba(0, 0, 0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+/* articles end ..........................................................................................*/
+#story{
+    background-image: url(../images/story-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 75vh;
+}
+/* follow us start ...........................................................................................*/
+.follow{
+    display: grid;
+    grid-template-columns: repeat(5,20%);
+}
+
+.inner{
+    background-color: rgba(0, 0, 0,0.7);
+    cursor: pointer;
+    visibility: hidden;
+    transition: 0.5s;
+}
+.follow-us:hover .inner{
+    visibility: visible;
+}
+/* follow us end ................................................................................................*/
+/* footer start .................................................................................................*/
+footer{
+    background-color: var(--second-color);
+}
+footer ul li a{
+    font-size: 1rem;
+}
+footer p{
+    color: var(--third-color);
+}
+footer i{
+    font-size: 1rem;
+    padding: 2%;
+}
+footer button{
+    font-size: 1rem;
+}
+.end-footer i{
+    font-size: 1.7rem;
+}
+/* footer end ....................................................................................................*/
+@media screen and (max-width:1250px) and (min-width:768px){
+    /* general styling start ..............*/
+    a{
+        font-size: 1rem;
+    }
+    i{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    button{
+        font-size: 1rem;
+    }
+    /* general styling end .....................*/
+    /* nav-bar start ...........................*/
+    nav li{
+        margin: 4% 0;
+    }
+    nav li a:hover{
+        background-color: var(--second-color);
+    }
+    nav li a{
+        color: var(--second-color);
+        display: block;
+        width: 75%;
+        padding:1% 3%;
+    }
+    .navbar-brand img{
+        width: 20%;
+        height: 100%;
+    }
+    #nav-list{
+        display:none;
+        width: 100%;
+        background-color:var(--main-color);
+        display:none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 75vh;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    /* nav-bar end ..................*/
+    /* first section start ................*/
+    .first-section div p{
+        font-size: 1.2rem;
+    }
+    .header-p{
+        font-size: 1.2rem;
+    }    
+    /* first section end .....................*/
+    /* follow us start .......................*/
+    .follow{
+        display: grid;
+        grid-template-columns: repeat(4,25%);
+    }
+    .inner p,.inner i{
+        font-size: 1rem;
+    }
+    /* follow us end ..........................*/
+    /* footer start ............................*/
+    footer ul li a{
+        font-size: 1rem;
+    }
+    footer p{
+        font-size: 1rem;
+    }    
+    footer i{
+        font-size: 1rem;
+        padding: 2%;
+    }
+    .end-footer i{
+        font-size: 1.5rem;
+    }
+    /* footer end ..................................*/
+}
+@media screen and (max-width:772px){
+    /* general styling start ...................*/
+    a{
+        font-size: 1rem;
+    }
+    i{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    button{
+        font-size: 1rem;
+    }
+    /*general styling end ........................*/
+    /* nav-bar start .............................*/
+    nav li{
+        margin: 5% 0;
+    }
+    nav li a:hover{
+        background-color: var(--second-color);
+    }
+    nav li a{
+        color: var(--second-color);
+        display: block;
+        width: 75%;
+        padding:1% 3% ;
+    }
+    .navbar-brand img{
+        min-width: 20%;
+        height: 100%;
+    }
+    #nav-list{
+        display:none;
+        width: 100%;
+        background-color:var(--main-color);
+        display:none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 75vh;
+    }
+    .navbar-toggler{
+        display: block;
+    }
+    /* nav-bar end .........................*/
+    /* fist section start ......................*/
+    .first-section div p{
+        font-size: 1rem;
+    }
+    .header-p{
+        font-size: 1rem;
+    } 
+    /* first section end ...........................*/
+    /* follow us start .............................*/
+    .follow{
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+    }
+    .inner p,.inner i{
+        font-size: 1rem;
+    }
+    /* follow us end ..............................*/
+     /* footer start ............................*/
+     footer ul li a{
+        font-size: 1rem;
+    }
+    footer p{
+        font-size: 1rem;
+    }    
+    footer i{
+        font-size: 1rem;
+        padding: 2%;
+    }
+    .end-footer i{
+        font-size: 1.3rem;
+    }
+    /* footer end ..................................*/
+}
